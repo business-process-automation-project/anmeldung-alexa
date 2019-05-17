@@ -1,3 +1,5 @@
+/* CONSTANTS */
+  
 exports.servicenow = {
-  instance: 'devXXXXX.service-now.com',
+  instance: 'devNNNNN.service-now.com',
 };

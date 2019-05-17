@@ -3,34 +3,19 @@
     "publishingInformation": {
       "locales": {
         "en-GB": {
-          "summary": "Create User",
+          "summary": "Simple ServiceNow Skill",
           "examplePhrases": [
             "Alexa open servicenow"
           ],
-          "keywords": [
-            "servicenow",
-            "it-service-management",
-            "itsm"
-          ],
-          "name": "Service Now Integration",
-          "description": "Connects to a ServiceNow instance and reads out different number of tickets. Allows additionally build new ServiceNow tickets like incidents, problems and change requests."
-        },
-        "de-DE": {
-          "summary": "Verwalten von Tickets im ServiceNow",
-          "examplePhrases": [
-            "Alexa öffne servicenow"
-          ],
-          "keywords": [
-            "servicenow",
-            "it-service-management",
-            "itsm"
-          ],
-          "name": "Service Now Integration",
-          "description": "Der Skill ermöglicht es einen belibiege Anzahl an Tickets (Incidents, Problems and Change Requests) einer Service Now Instanz auszugeben. Zusätzlich ist das Erstellen eines neuen Tickets möglich."
+          "name": "alexa-servicenow",
+          "description": "Connects to a ServiceNow instance and reads out 5 recent tickets",
+          "smallIconUri": "https://raw.githubusercontent.com/sanjayraina/alexa-servicenow/master/servicenowIcon.png"
         }
       },
       "isAvailableWorldwide": true,
-      "category": "BUSINESS_AND_FINANCE"
+      "testingInstructions": "Sample Testing Instructions.",
+      "category": "BUSINESS_AND_FINANCE",
+      "distributionCountries": []
     },
     "apis": {
       "custom": {
@@ -42,10 +27,10 @@
     "manifestVersion": "1.0",
     "privacyAndCompliance": {
       "allowsPurchases": false,
-      "usesPersonalInfo": false,
-      "isChildDirected": false,
       "isExportCompliant": true,
-      "containsAds": false
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
     }
   }
 }
