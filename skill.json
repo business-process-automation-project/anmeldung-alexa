@@ -3,19 +3,32 @@
     "publishingInformation": {
       "locales": {
         "en-GB": {
-          "summary": "Simple ServiceNow Skill",
+          "summary": "Playing a game named 1, 2 or 3",
           "examplePhrases": [
-            "Alexa open servicenow"
+            "Alexa open quiz"
           ],
-          "name": "alexa-servicenow",
-          "description": "Connects to a ServiceNow instance and reads out 5 recent tickets",
-          "smallIconUri": "https://raw.githubusercontent.com/sanjayraina/alexa-servicenow/master/servicenowIcon.png"
+          "keywords": [
+            "quiz game",
+            "1, 2 or 3"
+          ],
+          "name": "Alexa Quizgame 1, 2 oder 3",
+          "description": "Playing a game."
+        },
+        "de-DE": {
+          "summary": "Das Quizspiel 1,2 oder 3 spielen",
+          "examplePhrases": [
+            "Alexa öffne quiz"
+          ],
+          "keywords": [
+            "quiz spiel",
+            "1, 2 oder 3"
+          ],
+          "name": "Alexa Quizgame 1, 2 oder 3",
+          "description": "Lass uns ein Spiel spielen!"
         }
       },
       "isAvailableWorldwide": true,
-      "testingInstructions": "Sample Testing Instructions.",
-      "category": "BUSINESS_AND_FINANCE",
-      "distributionCountries": []
+      "category": "GAMES"
     },
     "apis": {
       "custom": {
@@ -27,10 +40,10 @@
     "manifestVersion": "1.0",
     "privacyAndCompliance": {
       "allowsPurchases": false,
-      "isExportCompliant": true,
-      "containsAds": false,
+      "usesPersonalInfo": false,
       "isChildDirected": false,
-      "usesPersonalInfo": false
+      "isExportCompliant": true,
+      "containsAds": false
     }
   }
 }
