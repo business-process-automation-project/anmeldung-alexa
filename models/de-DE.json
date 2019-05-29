@@ -1,79 +1,56 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "quiz",
+      "invocationName": "maxym de",
       "intents": [
         {
-          "name": "AMAZON.CancelIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.HelpIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.StopIntent",
-          "samples": []
-        },
-        {
-          "name": "StartGameIntent",
+          "name": "AnmeldungIntent",
           "slots": [
             {
-              "name": "NumberofQuestions",
-              "type": "AMAZON.NUMBER",
-              "samples": [
-                "{NumberofQuestions}",
-                "{NumberofQuestions} Fragen",
-                "mit {NumberofQuestions} Fragen spielen"
-              ]
+              "name": "Item",
+              "type": "LIST_OF_ITEMS"
             }
           ],
           "samples": [
-            "starte das spiel",
-            "starte das quiz",
-            "das spiel kann beginnen",
-            "starte eins zwei oder drei",
-            "eins zwei oder drei starten"
+            "wie kann ich ein {Item} bauen",
+            "wie soll {Item} bezogen werden"
           ]
         },
         {
-          "name": "AMAZON.NavigateHomeIntent",
-          "samples": []
+          "name": "AMAZON.RepeatIntent"
+        },
+        {
+          "name": "AMAZON.HelpIntent"
+        },
+        {
+          "name": "AMAZON.StopIntent"
+        },
+        {
+          "name": "AMAZON.CancelIntent"
         }
       ],
-      "types": []
-    },
-    "dialog": {
-      "intents": [
+      "types": [
         {
-          "name": "StartGameIntent",
-          "confirmationRequired": false,
-          "prompts": {},
-          "slots": [
+          "values": [
             {
-              "name": "NumberofQuestions",
-              "type": "AMAZON.NUMBER",
-              "confirmationRequired": false,
-              "elicitationRequired": true,
-              "prompts": {
-                "elicitation": "Elicit.Slot.954993215970.454105253553"
+              "name": {
+                "value": "Anmelden"
+              }
+            },
+            {
+              "name": {
+                "value": "Quarzsäule"
+              }
+            },
+            {
+              "name": {
+                "value": "Schwarz gefärbte Glasscheibe"
               }
             }
-          ]
+          ],
+          "name": "LIST_OF_ITEMS"
         }
-      ],
-      "delegationStrategy": "ALWAYS"
-    },
-    "prompts": [
-      {
-        "id": "Elicit.Slot.954993215970.454105253553",
-        "variations": [
-          {
-            "type": "PlainText",
-            "value": "Mit wie vielen Fragen soll gespielt werden?"
-          }
-        ]
-      }
-    ]
+      ]
+    }
   }
 }

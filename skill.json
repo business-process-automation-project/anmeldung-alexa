@@ -2,48 +2,40 @@
   "manifest": {
     "publishingInformation": {
       "locales": {
-        "en-GB": {
-          "summary": "Playing a game named 1, 2 or 3",
-          "examplePhrases": [
-            "Alexa open quiz"
-          ],
-          "keywords": [
-            "quiz game",
-            "1, 2 or 3"
-          ],
-          "name": "Alexa Quizgame 1, 2 oder 3",
-          "description": "Playing a game."
-        },
         "de-DE": {
-          "summary": "Das Quizspiel 1,2 oder 3 spielen",
+          "summary": "Alexa Quiz 1,2 or 3",
           "examplePhrases": [
-            "Alexa öffne quiz"
+            "Alexa öffne maxym"
           ],
           "keywords": [
-            "quiz spiel",
-            "1, 2 oder 3"
+            "maxym",
+            "1,2 or 3"
           ],
-          "name": "Alexa Quizgame 1, 2 oder 3",
-          "description": "Lass uns ein Spiel spielen!"
+          "name": "maxym",
+          "description": "Game"
         }
       },
       "isAvailableWorldwide": true,
-      "category": "GAMES"
+      "testingInstructions": "Sample Testing Instructions.",
+      "category": "GAMES",
+      "distributionCountries": []
     },
     "apis": {
       "custom": {
         "endpoint": {
-          "sourceDir": "lambda/custom"
+          "sourceDir": "lambda/custom",
+          "uri": "ask-custom-how-to-default"
         }
       }
     },
     "manifestVersion": "1.0",
+    "permissions": [],
     "privacyAndCompliance": {
       "allowsPurchases": false,
-      "usesPersonalInfo": false,
-      "isChildDirected": false,
       "isExportCompliant": true,
-      "containsAds": false
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
     }
   }
 }
