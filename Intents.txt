@@ -1,0 +1,61 @@
+//NEU !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Um Namen zu erfassen
+const NameNumberIntentHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'NameNumberIntent';
+  },
+  handle(handlerInput) {
+    const speechText = 'Ok. Tell me any number after a signal. Beep!'
+
+    return handlerInput.responseBuilder
+      .speak(speechText)
+      .reprompt(speechText) // <--- Here is our reprompt
+      .withSimpleCard('What did I learn', speechText)
+      .getResponse();
+  },
+};
+
+//NEU !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Um Namen zu erfassen
+const AnswerIntentHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'AnswerIntent';
+  },
+  handle(handlerInput) {
+    const slots = handlerInput.requestEnvelope.request.intent.slots;
+    const number = slots['numberAnswer'].value;
+
+    const speechText = `Your number is: ${number}.`
+
+    return handlerInput.responseBuilder
+      .speak(speechText)
+      .withSimpleCard('What did I learn', speechText)
+      .getResponse();
+  },
+};
+
+
+
+
+//Andere Versuche
+function getName(){
+    var UserName;
+    UserName = "Steve"
+    let speakOutput = 'UserName';
+}
+
+
+
+//Andere Versuche
+{
+    "name": "MyColorIsIntent",
+    "samples": [
+      "my favorite color is {Color}"
+    ],
+    "slots": [
+      {
+        "name": "Color",
+        "type": "LIST_OF_COLORS"
+      }
+    ]
+  },

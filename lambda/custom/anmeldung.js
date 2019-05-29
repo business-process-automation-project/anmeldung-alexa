@@ -5,7 +5,7 @@
 module.exports = {
   'ANMELDUNG_DE_DE': {
     'anmelden': 'Hallo, um dich für das Spiel anzumelden, brauche ich deinen namen. Wie heißt du ?',
-    'quarzsäule': 'Eine Quarzsäule erhält man, indem in Minecraft ein Quarzblock auf einem Quarzblock platziert wird.',
-    'schwarz gefärbte glasscheibe': 'Alle verschiedenen gefärbten Glasscheiben lassen sich craften, indem Glas gleicher Farbe in den unteren beiden Reihen horizontal platziert wird.',
+    'name': 'Eine Quarzsäule erhält man, indem in Minecraft ein Quarzblock auf einem Quarzblock platziert wird.',
+    'alter': 'Alle verschiedenen gefärbten Glasscheiben lassen sich craften, indem Glas gleicher Farbe in den unteren beiden Reihen horizontal platziert wird.',
   },
 };

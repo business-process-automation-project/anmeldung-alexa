@@ -12,7 +12,7 @@
             }
           ],
           "samples": [
-            "wie kann ich ein {Item} bauen",
+            "Ich möchte mich {Item}",
             "wie soll {Item} bezogen werden"
           ]
         },
@@ -39,12 +39,12 @@
             },
             {
               "name": {
-                "value": "Quarzsäule"
+                "value": "Name"
               }
             },
             {
               "name": {
-                "value": "Schwarz gefärbte Glasscheibe"
+                "value": "Alter"
               }
             }
           ],

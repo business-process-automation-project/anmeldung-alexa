@@ -83,6 +83,8 @@ const AnmeldungHandler = {
   },
 };
 
+
+
 const HelpHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest'
