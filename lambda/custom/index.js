@@ -835,6 +835,24 @@ const model = {
             "value": "Wie heißt du?"
           }
         ]
+      },
+      {
+        "id": "Confirm.Slot.496353064623.993877206541",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dein Name habe ich als {Username} erkannt, korrekt?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.496353064623.1229072626099",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "{Username} , ich habe dein Alter als {Userage} erkannt, korrekt?"
+          }
+        ]
       }
     ]
   }
