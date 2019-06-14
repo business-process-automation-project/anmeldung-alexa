@@ -302,9 +302,9 @@ const APP_ID = undefined;  // TODO replace with your Skill ID (OPTIONAL).
 
 function sendData (userName, userAge) {
      
-    var client  = mqtt.connect('mqtt://iot.eclipse.org'); //Brocker ip
+    var client  = mqtt.connect('mqtt://34.230.40.176'); //Brocker ip
     client.on('connect', function () {
-      client.subscribe('Topic0783638388'); //Topic name 
+      client.subscribe('SendPlayerData'); //Topic name 
       console.log('client has subscribed successfully');
     });
     
@@ -321,7 +321,7 @@ function sendData (userName, userAge) {
     var str = JSON.stringify(json);
     console.log(str);
     client.on('connect', function(){
-      client.publish('Topic0783638388', str);
+      client.publish('SendPlayerData', str);
       client.end();
     });
   }
