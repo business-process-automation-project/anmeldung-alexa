@@ -1,0 +1,122 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "bpa projekt",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "CreatUserIntent",
+          "slots": [
+            {
+              "name": "Username",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "Ich heiße {Username}",
+                "Der Nutzername ist {Username}",
+                "Der Nutzername lautet {Username}",
+                "Mein Name lautet {Username}",
+                "Ich bin {Username}",
+                "{Username}"
+              ]
+            },
+            {
+              "name": "Userage",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{Userage}",
+                "Ich bin {Userage}"
+              ]
+            }
+          ],
+          "samples": [
+            "ich brauche einen Benutzername",
+            "erstelle einen neuen Benutzer",
+            "ich möchte spielen",
+            "ich brauche eine Benutzername",
+            "Ich möchte mich registrieren",
+            "Ich möchte mich anmelden"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "CreatUserIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Username",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.192563791835.1498884520022"
+              }
+            },
+            {
+              "name": "Userage",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.192563791835.827857667954"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.192563791835.827857667954",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Wie alt bist du?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.192563791835.1498884520022",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Wie lautet dein Benutzername?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Wie ist dein Name?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Wie heißt du?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "16"
+}
