@@ -288,10 +288,8 @@ function sendData (userName, userAge) {
     var userAge;
     
     var json = {
-        type : "sign_up",
-        time : current_time,
-        username : userName,
-        userage : userAge
+        name : userName,
+        age : userAge
     };
     var str = JSON.stringify(json);
     console.log(str);
