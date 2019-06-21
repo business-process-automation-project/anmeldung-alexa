@@ -283,7 +283,6 @@ function sendData (userName, userAge) {
       console.log('client has subscribed successfully');
     });
     
-    var current_time = (new Date).getTime();
     var userName; 
     var userAge;
     
