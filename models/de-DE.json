@@ -70,8 +70,9 @@
               "name": "Username",
               "type": "AMAZON.SearchQuery",
               "elicitationRequired": true,
-              "confirmationRequired": false,
+              "confirmationRequired": true,
               "prompts": {
+                "confirmation": "Confirm.Slot.496353064623.993877206541",
                 "elicitation": "Elicit.Slot.192563791835.1498884520022"
               }
             },
@@ -79,8 +80,9 @@
               "name": "Userage",
               "type": "AMAZON.NUMBER",
               "elicitationRequired": true,
-              "confirmationRequired": false,
+              "confirmationRequired": true,
               "prompts": {
+                "confirmation": "Confirm.Slot.496353064623.1229072626099",
                 "elicitation": "Elicit.Slot.192563791835.827857667954"
               }
             }
@@ -95,7 +97,7 @@
         "variations": [
           {
             "type": "PlainText",
-            "value": "Wie alt bist du?"
+            "value": "{Username} , wie alt bist du?"
           }
         ]
       },
@@ -115,8 +117,34 @@
             "value": "Wie heißt du?"
           }
         ]
+      },
+      {
+        "id": "Confirm.Slot.496353064623.993877206541",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "{Username}, ist das richtig?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Dein Name habe ich als {Username} erkannt, korrekt?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.496353064623.1229072626099",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "{Username}, du bist {Userage} Jahre alt, korrekt?"
+          },
+          {
+            "type": "PlainText",
+            "value": "{Username} , ich habe dein Alter als {Userage} erkannt, korrekt?"
+          }
+        ]
       }
     ]
   },
-  "version": "16"
+  "version": "20"
 }
