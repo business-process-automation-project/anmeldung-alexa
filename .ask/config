@@ -6,11 +6,11 @@
       "merge": {},
       "resources": {
         "manifest": {
-          "eTag": "0a977214c45e80046067c274842c3e99"
+          "eTag": "8e0154b21ff3a62448cb675ca2cc8e8c"
         },
         "interactionModel": {
           "de-DE": {
-            "eTag": "e98f374a426f3081e5ea5cf7c94a8396"
+            "eTag": "18d3197375f6350d2e2c6a19bba223e5"
           }
         },
         "lambda": [
@@ -23,7 +23,7 @@
             "codeUri": "lambda/us-east-1_serverlessrepo-alexa-skil-alexaskillskitnodejsfact-WCLKWWWQHUA9",
             "functionName": "serverlessrepo-alexa-skil-alexaskillskitnodejsfact-WCLKWWWQHUA9",
             "handler": "index.handler",
-            "revisionId": "613f75bc-d475-4e95-9cba-dfb24a71152f",
+            "revisionId": "0f348205-f266-4e14-adea-98c986c43ec0",
             "runtime": "nodejs8.10"
           }
         ]

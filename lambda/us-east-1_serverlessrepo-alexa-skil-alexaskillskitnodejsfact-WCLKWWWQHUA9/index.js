@@ -74,7 +74,7 @@ const AMAZON_HelpIntent_Handler =  {
 
         let say = 'Du hast mich nach Hilfe gefragt. '; 
 
-        say += ' Du kannst mir folgendes sagen, ' + getSampleUtterance(sampleIntent) + ' . Also, was kann ich für dich tun?';
+        say += ' Du kannst mir folgendes sagen: ' + getSampleUtterance(sampleIntent) + ' . Also, was kann ich für dich tun?';
 
         return responseBuilder
             .speak(say)
@@ -203,12 +203,12 @@ const CreatUserIntent_Handler =  {
 
 
         say += slotStatus;
-        let say1 = 'Was kann ich noch für Sie tun?';
+        let say1 = 'Was kann ich noch für dich tun?';
         say += say1;
 
         return responseBuilder
             .speak(say)
-            .reprompt('Sorry, ich habe dich nicht verstanden, versuchen Sie noch mal. ' + say1)
+            .reprompt('Sorry, ich habe dich nicht verstanden, versuch es noch mal. ' + say1)
             .getResponse();
     },
 };
@@ -221,14 +221,14 @@ const LaunchRequest_Handler =  {
     handle(handlerInput) {
         const responseBuilder = handlerInput.responseBuilder;
 
-        let say = 'Willkommen beim Quizspiel Eins, Zwei oder Drei. Was kann ich für Sie tun?';
+        let say = 'Willkommen bei der Anmeldung für das Quizspiel Eins, Zwei oder Drei. Was kann ich für dich tun?';
 
         let skillTitle = capitalize(invocationName);
 
 
         return responseBuilder
             .speak(say)
-            .reprompt('try again, ' + say)
+            .reprompt('Ich habe dich nicht verstanden. Versuch es noch mal.')
             .withStandardCard('Quizspiel 1, 2 oder 3!', 
               'Hallo!\nDies ist ein Alexa Skill für das Spiel "1, 2 oder 3", die im ZDFtivi, KiKA und okidoki auf ORF eins (bis 2006 auch SF) ausgestrahlt wird. Der Skillname ist ' + skillTitle,
                welcomeCardImg.smallImageUrl, welcomeCardImg.largeImageUrl)
@@ -258,8 +258,8 @@ const ErrorHandler =  {
         // console.log(`Original Request was: ${JSON.stringify(request, null, 2)}`);
 
         return handlerInput.responseBuilder
-            .speak('Fehler! Ich habe es nicht verstehen können.  Bitte sagen Sie noch mal.')
-            .reprompt('Fehler! Ich habe es nicht verstehen können.  Bitte sagen Sie noch mal')
+            .speak('Fehler! Ich habe es nicht verstanden, versuch es noch mal.')
+            .reprompt('Fehler! Ich habe es nicht verstanden, versuch es noch mal.')
             .getResponse();
     }
 };
@@ -552,7 +552,7 @@ exports.handler = skillBuilder
 const model = {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "bpa projekt",
+      "invocationName": "bpa anmeldung",
       "intents": [
         {
           "name": "AMAZON.FallbackIntent",
@@ -582,8 +582,8 @@ const model = {
               "type": "AMAZON.SearchQuery",
               "samples": [
                 "Ich heiße {Username}",
-                "Der Nutzername ist {Username}",
-                "Der Nutzername lautet {Username}",
+                "Mein Nutzername ist {Username}",
+                "Mein Nutzername lautet {Username}",
                 "Mein Name lautet {Username}",
                 "Ich bin {Username}",
                 "{Username}"
@@ -599,9 +599,9 @@ const model = {
             }
           ],
           "samples": [
-            "ich brauche einen Benutzername",
+            "ich brauche einen Benutzernamen",
             "erstelle einen neuen Benutzer",
-            "ich brauche eine Benutzername",
+            "ich brauche einen Benutzernamen",
             "Ich möchte mich registrieren",
             "Ich möchte mich anmelden"
           ]

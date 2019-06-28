@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "bpa projekt",
+      "invocationName": "bpa anmeldung",
       "intents": [
         {
           "name": "AMAZON.FallbackIntent",
@@ -50,7 +50,6 @@
           "samples": [
             "ich brauche einen Benutzername",
             "erstelle einen neuen Benutzer",
-            "ich möchte spielen",
             "ich brauche eine Benutzername",
             "Ich möchte mich registrieren",
             "Ich möchte mich anmelden"
