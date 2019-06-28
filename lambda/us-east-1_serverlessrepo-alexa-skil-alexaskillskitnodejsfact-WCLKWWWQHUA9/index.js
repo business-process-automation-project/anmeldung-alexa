@@ -72,9 +72,9 @@ const AMAZON_HelpIntent_Handler =  {
         let intents = getCustomIntents();
         let sampleIntent = randomElement(intents);
 
-        let say = 'You asked for help. '; 
+        let say = 'Du hast mich nach Hilfe gefragt. '; 
 
-        say += ' Here something you can ask me, ' + getSampleUtterance(sampleIntent);
+        say += ' Du kannst mir folgendes sagen, ' + getSampleUtterance(sampleIntent) + ' . Also, was kann ich für dich tun?';
 
         return responseBuilder
             .speak(say)
