@@ -3,18 +3,38 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "uri": "arn:aws:lambda:us-east-1:082726492831:function:serverlessrepo-alexa-skil-alexaskillskitnodejsfact-WCLKWWWQHUA9"
+          "uri": "serverlessrepo-alexa-skil-alexaskillskitnodejsfact-WCLKWWWQHUA9",
+          "sourceDir": "lambda/us-east-1_serverlessrepo-alexa-skil-alexaskillskitnodejsfact-WCLKWWWQHUA9"
         },
         "interfaces": []
       }
     },
     "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "locales": {
+        "de-DE": {}
+      },
+      "allowsPurchases": false,
+      "usesPersonalInfo": true,
+      "isChildDirected": true,
+      "isExportCompliant": true,
+      "containsAds": false
+    },
     "publishingInformation": {
       "locales": {
         "de-DE": {
-          "name": "mytestskill"
+          "name": "Eins zwei oder drei",
+          "summary": "Playing a game named 1, 2 or 3",
+          "description": "Playing a game named 1, 2 or 3",
+          "examplePhrases": [
+            "Ich möchte spielen"
+          ],
+          "keywords": []
         }
-      }
+      },
+      "isAvailableWorldwide": true,
+      "distributionMode": "PRIVATE",
+      "distributionCountries": []
     }
   }
 }
